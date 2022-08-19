@@ -79,651 +79,764 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 20,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      width: 60.0,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 25,
-                                backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                              ),
-                              CircleAvatar(
-                                radius: 7,
-                                backgroundColor: Colors.green,
-                              ),
-
-                            ],
-                          ),
-                          Text(
-                              'Nada Hesham Mostafa',
-                               maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-
-                        ],
-                      ),
-                    ),
-                    SizedBox(width: 20,),
-                    Container(
-                      width: 60.0,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 25,
-                                backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                              ),
-                              CircleAvatar(
-                                radius: 7,
-                                backgroundColor: Colors.green,
-                              ),
-
-                            ],
-                          ),
-                          Text(
-                            'Nada Hesham Mostafa',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-
-                        ],
-                      ),
-                    ),
-                    SizedBox(width: 20,),
-                    Container(
-                      width: 60.0,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 25,
-                                backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                              ),
-                              CircleAvatar(
-                                radius: 7,
-                                backgroundColor: Colors.green,
-                              ),
-
-                            ],
-                          ),
-                          Text(
-                            'Nada Hesham Mostafa',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-
-                        ],
-                      ),
-                    ),
-                    SizedBox(width: 20,),
-                    Container(
-                      width: 60.0,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 25,
-                                backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                              ),
-                              CircleAvatar(
-                                radius: 7,
-                                backgroundColor: Colors.green,
-                              ),
-
-                            ],
-                          ),
-                          Text(
-                            'Nada Hesham Mostafa',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-
-                        ],
-                      ),
-                    ),
-                    SizedBox(width: 20,),
-                    Container(
-                      width: 60.0,
-                      child: Column(
-                        children: [
-                          Stack(
-                            alignment: AlignmentDirectional.bottomEnd,
-                            children: [
-                              CircleAvatar(
-                                radius: 25,
-                                backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                              ),
-                              CircleAvatar(
-                                radius: 7,
-                                backgroundColor: Colors.green,
-                              ),
-
-                            ],
-                          ),
-                          Text(
-                            'Nada Hesham Mostafa',
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                          ),
-
-                        ],
-                      ),
-                    ),
-                  ],
+              //list view
+              Container(
+                height: 100,
+                child: ListView.separated(
+                  shrinkWrap: true,
+                  scrollDirection: Axis.horizontal,
+                    itemBuilder: (context , index) =>buildStoryItem(),
+                  separatorBuilder: (context ,index)=>SizedBox(width: 20,),
+                  itemCount: 10,
                 ),
               ),
-              SizedBox(height: 30,),
-              Row(
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.bottomEnd,
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                      ),
-                      CircleAvatar(
-                        radius: 7,
-                        backgroundColor: Colors.green,
-                      ),
-
-                    ],
-                  ),
-                  SizedBox(width: 20,),
-                  
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nada Hesham',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 8,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text (
-                                'hello my name is nada',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Container(
-                                width: 7,
-                                height: 7,
-                                decoration: BoxDecoration(
-                                  color: Colors.cyan,
-                                  shape: BoxShape.circle
-                                ),
-                              ),
-                            ),
-                            Text('2:00')
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-
-
-                ],
+              SizedBox(
+                height: 10,
               ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.bottomEnd,
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              ListView.separated(
+                physics: NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                  itemBuilder: (context ,index)=>buildChatItem() ,
+                  separatorBuilder:(context ,index)=> SizedBox(height: 20,),
+                  itemCount: 20),
+//end of list view
 
-                      ),
-                      CircleAvatar(
-                        radius: 7,
-                        backgroundColor: Colors.green,
-                      ),
+            //*not using list view another solution*//
+              // SingleChildScrollView(
+              //   scrollDirection: Axis.horizontal,
+              //   child: Row(
+              //     children: [
+              //       Container(
+              //         width: 60.0,
+              //         child: Column(
+              //           children: [
+              //             Stack(
+              //               alignment: AlignmentDirectional.bottomEnd,
+              //               children: [
+              //                 CircleAvatar(
+              //                   radius: 25,
+              //                   backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //                 ),
+              //                 CircleAvatar(
+              //                   radius: 7,
+              //                   backgroundColor: Colors.green,
+              //                 ),
+              //
+              //               ],
+              //             ),
+              //             Text(
+              //                 'Nada Hesham Mostafa',
+              //                  maxLines: 2,
+              //               overflow: TextOverflow.ellipsis,
+              //             ),
+              //
+              //           ],
+              //         ),
+              //       ),
+              //       SizedBox(width: 20,),
+              //       Container(
+              //         width: 60.0,
+              //         child: Column(
+              //           children: [
+              //             Stack(
+              //               alignment: AlignmentDirectional.bottomEnd,
+              //               children: [
+              //                 CircleAvatar(
+              //                   radius: 25,
+              //                   backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //                 ),
+              //                 CircleAvatar(
+              //                   radius: 7,
+              //                   backgroundColor: Colors.green,
+              //                 ),
+              //
+              //               ],
+              //             ),
+              //             Text(
+              //               'Nada Hesham Mostafa',
+              //               maxLines: 2,
+              //               overflow: TextOverflow.ellipsis,
+              //             ),
+              //
+              //           ],
+              //         ),
+              //       ),
+              //       SizedBox(width: 20,),
+              //       Container(
+              //         width: 60.0,
+              //         child: Column(
+              //           children: [
+              //             Stack(
+              //               alignment: AlignmentDirectional.bottomEnd,
+              //               children: [
+              //                 CircleAvatar(
+              //                   radius: 25,
+              //                   backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //                 ),
+              //                 CircleAvatar(
+              //                   radius: 7,
+              //                   backgroundColor: Colors.green,
+              //                 ),
+              //
+              //               ],
+              //             ),
+              //             Text(
+              //               'Nada Hesham Mostafa',
+              //               maxLines: 2,
+              //               overflow: TextOverflow.ellipsis,
+              //             ),
+              //
+              //           ],
+              //         ),
+              //       ),
+              //       SizedBox(width: 20,),
+              //       Container(
+              //         width: 60.0,
+              //         child: Column(
+              //           children: [
+              //             Stack(
+              //               alignment: AlignmentDirectional.bottomEnd,
+              //               children: [
+              //                 CircleAvatar(
+              //                   radius: 25,
+              //                   backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //                 ),
+              //                 CircleAvatar(
+              //                   radius: 7,
+              //                   backgroundColor: Colors.green,
+              //                 ),
+              //
+              //               ],
+              //             ),
+              //             Text(
+              //               'Nada Hesham Mostafa',
+              //               maxLines: 2,
+              //               overflow: TextOverflow.ellipsis,
+              //             ),
+              //
+              //           ],
+              //         ),
+              //       ),
+              //       SizedBox(width: 20,),
+              //       Container(
+              //         width: 60.0,
+              //         child: Column(
+              //           children: [
+              //             Stack(
+              //               alignment: AlignmentDirectional.bottomEnd,
+              //               children: [
+              //                 CircleAvatar(
+              //                   radius: 25,
+              //                   backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //                 ),
+              //                 CircleAvatar(
+              //                   radius: 7,
+              //                   backgroundColor: Colors.green,
+              //                 ),
+              //
+              //               ],
+              //             ),
+              //             Text(
+              //               'Nada Hesham Mostafa',
+              //               maxLines: 2,
+              //               overflow: TextOverflow.ellipsis,
+              //             ),
+              //
+              //           ],
+              //         ),
+              //       ),
+              //     ],
+              //   ),
+              // ),
+              // SizedBox(height: 30,),
+              // Row(
+              //   children: [
+              //     Stack(
+              //       alignment: AlignmentDirectional.bottomEnd,
+              //       children: [
+              //         CircleAvatar(
+              //           radius: 25,
+              //           backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //         ),
+              //         CircleAvatar(
+              //           radius: 7,
+              //           backgroundColor: Colors.green,
+              //         ),
+              //
+              //       ],
+              //     ),
+              //     SizedBox(width: 20,),
+              //
+              //     Expanded(
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text(
+              //             'Nada Hesham',
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //           SizedBox(height: 8,),
+              //           Row(
+              //             children: [
+              //               Expanded(
+              //                 child: Text (
+              //                   'hello my name is nada',
+              //                   maxLines: 1,
+              //                   overflow: TextOverflow.ellipsis,
+              //                 ),
+              //               ),
+              //               Padding(
+              //                 padding: const EdgeInsets.symmetric(horizontal: 10),
+              //                 child: Container(
+              //                   width: 7,
+              //                   height: 7,
+              //                   decoration: BoxDecoration(
+              //                     color: Colors.cyan,
+              //                     shape: BoxShape.circle
+              //                   ),
+              //                 ),
+              //               ),
+              //               Text('2:00')
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     ),
+              //
+              //
+              //   ],
+              // ),
+              // SizedBox(height: 20,),
+              // Row(
+              //   children: [
+              //     Stack(
+              //       alignment: AlignmentDirectional.bottomEnd,
+              //       children: [
+              //         CircleAvatar(
+              //           radius: 25,
+              //           backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //         ),
+              //         CircleAvatar(
+              //           radius: 7,
+              //           backgroundColor: Colors.green,
+              //         ),
+              //
+              //       ],
+              //     ),
+              //     SizedBox(width: 20,),
+              //
+              //     Expanded(
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text(
+              //             'Nada Hesham',
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //           SizedBox(height: 8,),
+              //           Row(
+              //             children: [
+              //               Expanded(
+              //                 child: Text (
+              //                   'hello my name is nada',
+              //                   maxLines: 1,
+              //                   overflow: TextOverflow.ellipsis,
+              //                 ),
+              //               ),
+              //               Padding(
+              //                 padding: const EdgeInsets.symmetric(horizontal: 10),
+              //                 child: Container(
+              //                   width: 7,
+              //                   height: 7,
+              //                   decoration: BoxDecoration(
+              //                       color: Colors.cyan,
+              //                       shape: BoxShape.circle
+              //                   ),
+              //                 ),
+              //               ),
+              //               Text('2:00')
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     ),
+              //
+              //
+              //   ],
+              // ),
+              // SizedBox(height: 20,),
+              // Row(
+              //   children: [
+              //     Stack(
+              //       alignment: AlignmentDirectional.bottomEnd,
+              //       children: [
+              //         CircleAvatar(
+              //           radius: 25,
+              //           backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //         ),
+              //         CircleAvatar(
+              //           radius: 7,
+              //           backgroundColor: Colors.green,
+              //         ),
+              //
+              //       ],
+              //     ),
+              //     SizedBox(width: 20,),
+              //
+              //     Expanded(
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text(
+              //             'Nada Hesham',
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //           SizedBox(height: 8,),
+              //           Row(
+              //             children: [
+              //               Expanded(
+              //                 child: Text (
+              //                   'hello my name is nada',
+              //                   maxLines: 1,
+              //                   overflow: TextOverflow.ellipsis,
+              //                 ),
+              //               ),
+              //               Padding(
+              //                 padding: const EdgeInsets.symmetric(horizontal: 10),
+              //                 child: Container(
+              //                   width: 7,
+              //                   height: 7,
+              //                   decoration: BoxDecoration(
+              //                       color: Colors.cyan,
+              //                       shape: BoxShape.circle
+              //                   ),
+              //                 ),
+              //               ),
+              //               Text('2:00')
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     ),
+              //
+              //
+              //   ],
+              // ),
+              // SizedBox(height: 20,),
+              // Row(
+              //   children: [
+              //     Stack(
+              //       alignment: AlignmentDirectional.bottomEnd,
+              //       children: [
+              //         CircleAvatar(
+              //           radius: 25,
+              //           backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //         ),
+              //         CircleAvatar(
+              //           radius: 7,
+              //           backgroundColor: Colors.green,
+              //         ),
+              //
+              //       ],
+              //     ),
+              //     SizedBox(width: 20,),
+              //
+              //     Expanded(
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text(
+              //             'Nada Hesham',
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //           SizedBox(height: 8,),
+              //           Row(
+              //             children: [
+              //               Expanded(
+              //                 child: Text (
+              //                   'hello my name is nada',
+              //                   maxLines: 1,
+              //                   overflow: TextOverflow.ellipsis,
+              //                 ),
+              //               ),
+              //               Padding(
+              //                 padding: const EdgeInsets.symmetric(horizontal: 10),
+              //                 child: Container(
+              //                   width: 7,
+              //                   height: 7,
+              //                   decoration: BoxDecoration(
+              //                       color: Colors.cyan,
+              //                       shape: BoxShape.circle
+              //                   ),
+              //                 ),
+              //               ),
+              //               Text('2:00')
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     ),
+              //
+              //
+              //   ],
+              // ),
+              // SizedBox(height: 20,),
+              // Row(
+              //   children: [
+              //     Stack(
+              //       alignment: AlignmentDirectional.bottomEnd,
+              //       children: [
+              //         CircleAvatar(
+              //           radius: 25,
+              //           backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //         ),
+              //         CircleAvatar(
+              //           radius: 7,
+              //           backgroundColor: Colors.green,
+              //         ),
+              //
+              //       ],
+              //     ),
+              //     SizedBox(width: 20,),
+              //
+              //     Expanded(
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text(
+              //             'Nada Hesham',
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //           SizedBox(height: 8,),
+              //           Row(
+              //             children: [
+              //               Expanded(
+              //                 child: Text (
+              //                   'hello my name is nada',
+              //                   maxLines: 1,
+              //                   overflow: TextOverflow.ellipsis,
+              //                 ),
+              //               ),
+              //               Padding(
+              //                 padding: const EdgeInsets.symmetric(horizontal: 10),
+              //                 child: Container(
+              //                   width: 7,
+              //                   height: 7,
+              //                   decoration: BoxDecoration(
+              //                       color: Colors.cyan,
+              //                       shape: BoxShape.circle
+              //                   ),
+              //                 ),
+              //               ),
+              //               Text('2:00')
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     ),
+              //
+              //
+              //   ],
+              // ),
+              // SizedBox(height: 20,),
+              // Row(
+              //   children: [
+              //     Stack(
+              //       alignment: AlignmentDirectional.bottomEnd,
+              //       children: [
+              //         CircleAvatar(
+              //           radius: 25,
+              //           backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //         ),
+              //         CircleAvatar(
+              //           radius: 7,
+              //           backgroundColor: Colors.green,
+              //         ),
+              //
+              //       ],
+              //     ),
+              //     SizedBox(width: 20,),
+              //
+              //     Expanded(
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text(
+              //             'Nada Hesham',
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //           SizedBox(height: 8,),
+              //           Row(
+              //             children: [
+              //               Expanded(
+              //                 child: Text (
+              //                   'hello my name is nada',
+              //                   maxLines: 1,
+              //                   overflow: TextOverflow.ellipsis,
+              //                 ),
+              //               ),
+              //               Padding(
+              //                 padding: const EdgeInsets.symmetric(horizontal: 10),
+              //                 child: Container(
+              //                   width: 7,
+              //                   height: 7,
+              //                   decoration: BoxDecoration(
+              //                       color: Colors.cyan,
+              //                       shape: BoxShape.circle
+              //                   ),
+              //                 ),
+              //               ),
+              //               Text('2:00')
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     ),
+              //
+              //
+              //   ],
+              // ),
+              // SizedBox(height: 20,),
+              // Row(
+              //   children: [
+              //     Stack(
+              //       alignment: AlignmentDirectional.bottomEnd,
+              //       children: [
+              //         CircleAvatar(
+              //           radius: 25,
+              //           backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //         ),
+              //         CircleAvatar(
+              //           radius: 7,
+              //           backgroundColor: Colors.green,
+              //         ),
+              //
+              //       ],
+              //     ),
+              //     SizedBox(width: 20,),
+              //
+              //     Expanded(
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text(
+              //             'Nada Hesham',
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //           SizedBox(height: 8,),
+              //           Row(
+              //             children: [
+              //               Expanded(
+              //                 child: Text (
+              //                   'hello my name is nada',
+              //                   maxLines: 1,
+              //                   overflow: TextOverflow.ellipsis,
+              //                 ),
+              //               ),
+              //               Padding(
+              //                 padding: const EdgeInsets.symmetric(horizontal: 10),
+              //                 child: Container(
+              //                   width: 7,
+              //                   height: 7,
+              //                   decoration: BoxDecoration(
+              //                       color: Colors.cyan,
+              //                       shape: BoxShape.circle
+              //                   ),
+              //                 ),
+              //               ),
+              //               Text('2:00')
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     ),
+              //
+              //
+              //   ],
+              // ),
+              // SizedBox(height: 20,),
+              // Row(
+              //   children: [
+              //     Stack(
+              //       alignment: AlignmentDirectional.bottomEnd,
+              //       children: [
+              //         CircleAvatar(
+              //           radius: 25,
+              //           backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+              //
+              //         ),
+              //         CircleAvatar(
+              //           radius: 7,
+              //           backgroundColor: Colors.green,
+              //         ),
+              //
+              //       ],
+              //     ),
+              //     SizedBox(width: 20,),
+              //
+              //     Expanded(
+              //       child: Column(
+              //         crossAxisAlignment: CrossAxisAlignment.start,
+              //         children: [
+              //           Text(
+              //             'Nada Hesham',
+              //             style: TextStyle(
+              //               fontWeight: FontWeight.bold,
+              //             ),
+              //           ),
+              //           SizedBox(height: 8,),
+              //           Row(
+              //             children: [
+              //               Expanded(
+              //                 child: Text (
+              //                   'hello my name is nada',
+              //                   maxLines: 1,
+              //                   overflow: TextOverflow.ellipsis,
+              //                 ),
+              //               ),
+              //               Padding(
+              //                 padding: const EdgeInsets.symmetric(horizontal: 10),
+              //                 child: Container(
+              //                   width: 7,
+              //                   height: 7,
+              //                   decoration: BoxDecoration(
+              //                       color: Colors.cyan,
+              //                       shape: BoxShape.circle
+              //                   ),
+              //                 ),
+              //               ),
+              //               Text('2:00')
+              //             ],
+              //           )
+              //         ],
+              //       ),
+              //     ),
+              //
+              //
+              //   ],
+              // ),
 
-                    ],
-                  ),
-                  SizedBox(width: 20,),
 
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nada Hesham',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 8,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text (
-                                'hello my name is nada',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Container(
-                                width: 7,
-                                height: 7,
-                                decoration: BoxDecoration(
-                                    color: Colors.cyan,
-                                    shape: BoxShape.circle
-                                ),
-                              ),
-                            ),
-                            Text('2:00')
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
+             ],
+           ),
+        ),
+       ),
+     );
+   }
 
 
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.bottomEnd,
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+  Widget buildChatItem()  => Row(
+    children: [
+      Stack(
+        alignment: AlignmentDirectional.bottomEnd,
+        children: [
+          CircleAvatar(
+            radius: 25,
+            backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
 
-                      ),
-                      CircleAvatar(
-                        radius: 7,
-                        backgroundColor: Colors.green,
-                      ),
-
-                    ],
-                  ),
-                  SizedBox(width: 20,),
-
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nada Hesham',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 8,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text (
-                                'hello my name is nada',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Container(
-                                width: 7,
-                                height: 7,
-                                decoration: BoxDecoration(
-                                    color: Colors.cyan,
-                                    shape: BoxShape.circle
-                                ),
-                              ),
-                            ),
-                            Text('2:00')
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-
-
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.bottomEnd,
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                      ),
-                      CircleAvatar(
-                        radius: 7,
-                        backgroundColor: Colors.green,
-                      ),
-
-                    ],
-                  ),
-                  SizedBox(width: 20,),
-
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nada Hesham',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 8,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text (
-                                'hello my name is nada',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Container(
-                                width: 7,
-                                height: 7,
-                                decoration: BoxDecoration(
-                                    color: Colors.cyan,
-                                    shape: BoxShape.circle
-                                ),
-                              ),
-                            ),
-                            Text('2:00')
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-
-
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.bottomEnd,
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                      ),
-                      CircleAvatar(
-                        radius: 7,
-                        backgroundColor: Colors.green,
-                      ),
-
-                    ],
-                  ),
-                  SizedBox(width: 20,),
-
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nada Hesham',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 8,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text (
-                                'hello my name is nada',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Container(
-                                width: 7,
-                                height: 7,
-                                decoration: BoxDecoration(
-                                    color: Colors.cyan,
-                                    shape: BoxShape.circle
-                                ),
-                              ),
-                            ),
-                            Text('2:00')
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-
-
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.bottomEnd,
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                      ),
-                      CircleAvatar(
-                        radius: 7,
-                        backgroundColor: Colors.green,
-                      ),
-
-                    ],
-                  ),
-                  SizedBox(width: 20,),
-
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nada Hesham',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 8,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text (
-                                'hello my name is nada',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Container(
-                                width: 7,
-                                height: 7,
-                                decoration: BoxDecoration(
-                                    color: Colors.cyan,
-                                    shape: BoxShape.circle
-                                ),
-                              ),
-                            ),
-                            Text('2:00')
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-
-
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.bottomEnd,
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                      ),
-                      CircleAvatar(
-                        radius: 7,
-                        backgroundColor: Colors.green,
-                      ),
-
-                    ],
-                  ),
-                  SizedBox(width: 20,),
-
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nada Hesham',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 8,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text (
-                                'hello my name is nada',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Container(
-                                width: 7,
-                                height: 7,
-                                decoration: BoxDecoration(
-                                    color: Colors.cyan,
-                                    shape: BoxShape.circle
-                                ),
-                              ),
-                            ),
-                            Text('2:00')
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-
-
-                ],
-              ),
-              SizedBox(height: 20,),
-              Row(
-                children: [
-                  Stack(
-                    alignment: AlignmentDirectional.bottomEnd,
-                    children: [
-                      CircleAvatar(
-                        radius: 25,
-                        backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
-
-                      ),
-                      CircleAvatar(
-                        radius: 7,
-                        backgroundColor: Colors.green,
-                      ),
-
-                    ],
-                  ),
-                  SizedBox(width: 20,),
-
-                  Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          'Nada Hesham',
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(height: 8,),
-                        Row(
-                          children: [
-                            Expanded(
-                              child: Text (
-                                'hello my name is nada',
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 10),
-                              child: Container(
-                                width: 7,
-                                height: 7,
-                                decoration: BoxDecoration(
-                                    color: Colors.cyan,
-                                    shape: BoxShape.circle
-                                ),
-                              ),
-                            ),
-                            Text('2:00')
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-
-
-                ],
-              ),
-
-
-            ],
           ),
+          CircleAvatar(
+            radius: 7,
+            backgroundColor: Colors.green,
+          ),
+
+        ],
+      ),
+      SizedBox(width: 20,),
+      Expanded(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Nada Hesham',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: 8,),
+            Row(
+              children: [
+                Expanded(
+                  child: Text (
+                    'hello my name is nada',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Container(
+                    width: 7,
+                    height: 7,
+                    decoration: BoxDecoration(
+                        color: Colors.cyan,
+                        shape: BoxShape.circle
+                    ),
+                  ),
+                ),
+                Text('2:00')
+              ],
+            )
+          ],
         ),
       ),
-    );
-  }
+
+
+    ],
+  );
+  Widget buildStoryItem() =>Container(
+    width: 60.0,
+    child: Column(
+      children: [
+        Stack(
+          alignment: AlignmentDirectional.bottomEnd,
+          children: [
+            CircleAvatar(
+              radius: 25,
+              backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+
+            ),
+            CircleAvatar(
+              radius: 7,
+              backgroundColor: Colors.green,
+            ),
+
+          ],
+        ),
+        Text(
+          'Nada Hesham Mostafa',
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
+
+      ],
+    ),
+  );
+
 }
