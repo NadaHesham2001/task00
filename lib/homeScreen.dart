@@ -758,7 +758,7 @@ class HomeScreen extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 25,
-            backgroundImage: NetworkImage('https://F%26utm_term%3Duser&hash=34c3e7ba128e1cb89818033b845c9a0b99efa48b&='),
+          backgroundImage: AssetImage(('assets/dd.png')),
 
           ),
           CircleAvatar(
